@@ -19,3 +19,11 @@
 - Check services are working
   - http://localhost:3000 - server API
   - http://localhost:5000 - client frontend
+
+## Local testing of Github Action workflows
+
+- [Install Act tool](https://github.com/nektos/act?tab=readme-ov-file#installation)
+- run in the project toot folder
+  - `act -l` - list all workflows
+  - `act push` - emulate push event, run corresponding workflows
+  - `act -j test -W .github/workflows/server-test.yml` - run specific job in the specific file
